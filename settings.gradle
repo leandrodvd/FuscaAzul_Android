@@ -1,1 +1,2 @@
-include ':app'
+include ':app',':AndTinder'
+project(':AndTinder').projectDir = new File('libs/AndTinder')

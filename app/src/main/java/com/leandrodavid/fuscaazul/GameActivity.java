@@ -39,7 +39,7 @@ public class GameActivity extends ActionBarActivity {
     }
 
     private void setOnCardDismissListener(CardModel card){
-        card.setOnCardDimissedListener(new CardModel.OnCardDimissedListener() {
+        card.setOnCardDismissedListener(new CardModel.OnCardDismissedListener() {
             @Override
             public void onLike() {
                 Toast.makeText(GameActivity.this,"I liked it",Toast.LENGTH_SHORT).show();
