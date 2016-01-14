@@ -18,25 +18,32 @@ import com.andtinder.view.SimpleCardStackAdapter;
 
 public class GameActivity extends ActionBarActivity {
     private  CardContainer mCardContainer;
-    @Override
+    private ImageCardStackAdapter imageCardStackAdapter;
+    private GameController gameController;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        gameController =  GameController.getGameController(this);
+
+
         setContentView(R.layout.activity_game);
         mCardContainer = (CardContainer) findViewById(R.id.layoutview);
         mCardContainer.setOrientation(Orientations.Orientation.Ordered);
+        imageCardStackAdapter = new ImageCardStackAdapter(this,gameController.getCardStack());
 
-       CardModel card1 = new CardModel("Fusca 1", "Esse é o fusca 1", ContextCompat.getDrawable(this, R.drawable.fusca1));
+        /**
+        CardModel card1 = new CardModel("Fusca 1", "Esse é o fusca 1", ContextCompat.getDrawable(this, R.drawable.fusca1));
         CardModel card2 = new CardModel("Fusca 2", "Esse é o fusca 2", ContextCompat.getDrawable(this, R.drawable.fusca2));
         CardModel card3 = new CardModel("Fusca 3", "Esse é o fusca 3", ContextCompat.getDrawable(this, R.drawable.fusca3));
         setOnCardDismissListener(card1);
         setOnCardDismissListener(card2);
         setOnCardDismissListener(card3);
-        ImageCardStackAdapter adapter = new ImageCardStackAdapter(this);
+        ImageCardStackAdapter adapter = new ImageCardStackAdapter(this,gameC;
         adapter.add(card1);
         adapter.add(card2);
         adapter.add(card3);
-
-        mCardContainer.setAdapter(adapter);
+**/
+        mCardContainer.setAdapter(imageCardStackAdapter);
 
     }
 

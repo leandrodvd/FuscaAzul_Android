@@ -11,12 +11,18 @@ import com.andtinder.R;
 
 import com.andtinder.model.CardModel;
 
+import java.util.Collection;
+
 /**
  * Created by android5519 on 12/01/16.
  */
 public class ImageCardStackAdapter extends CardStackAdapter{
     public ImageCardStackAdapter(Context context) {
         super(context);
+    }
+
+    public ImageCardStackAdapter(Context context, Collection<? extends CardModel> items) {
+        super(context, items);
     }
 
     @Override
