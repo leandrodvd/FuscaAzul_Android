@@ -9,20 +9,20 @@ import com.andtinder.model.CardModel;
  * Created by android5519 on 12/01/16.
  */
 public class GameCardModel extends CardModel {
-    private boolean isFuscaAzul;
+    private Car car;
 
 
-    public GameCardModel(String title, String description, Drawable cardImage, boolean isFuscaAzul) {
+    public GameCardModel(String title, String description, Drawable cardImage, Car car) {
         super(title, description, cardImage);
-        this.isFuscaAzul = isFuscaAzul;
+        this.car = car;
     }
 
-    public GameCardModel(String title, String description, Bitmap cardImage, boolean isFuscaAzul) {
+    public GameCardModel(String title, String description, Bitmap cardImage, Car car) {
         super(title, description, cardImage);
-        this.isFuscaAzul = isFuscaAzul;
+        this.car = car;
     }
 
-    public boolean isFuscaAzul() {
-        return isFuscaAzul;
+    public Car getCar() {
+        return car;
     }
 }

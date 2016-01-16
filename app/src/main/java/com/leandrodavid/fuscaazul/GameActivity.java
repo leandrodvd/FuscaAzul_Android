@@ -22,13 +22,11 @@ public class GameActivity extends ActionBarActivity {
     private GameController gameController;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        gameController =  GameController.getGameController(this);
-
-
         setContentView(R.layout.activity_game);
         mCardContainer = (CardContainer) findViewById(R.id.layoutview);
         mCardContainer.setOrientation(Orientations.Orientation.Ordered);
+
+        gameController =  GameController.getGameController(this);
         imageCardStackAdapter = new ImageCardStackAdapter(this,gameController.getCardStack());
 
         /**

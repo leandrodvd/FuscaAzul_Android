@@ -16,7 +16,7 @@ public class GameController {
     private GameCardStackFactory stackFactory;
     Activity activity ;
     private int level;
-    private int acertos;
+    private int acertos=0;
     TextView acertosView ;
 
 
@@ -29,6 +29,7 @@ public class GameController {
 
     private GameController(Activity activity) {
         setLevel(0);
+        setAcertos(0);
         this.activity=activity;
         stackFactory = new GameCardStackFactory(this.activity);
         acertosView=(TextView)activity.findViewById(R.id.acertos);
@@ -50,9 +51,12 @@ public class GameController {
         return acertos;
     }
 
+    private void setAcertos(int acertos){
+        this.acertos=acertos;
+    }
     public void addAcerto() {
-        this.acertos++;
+        this.setAcertos(this.getAcertos()+1);
         Log.d("FUSCA AZUL CONTROLLER","Acertos:"+acertos);
-        acertosView.setText(acertos);
+        acertosView.setText(String.valueOf(this.getAcertos()));
     }
 }
