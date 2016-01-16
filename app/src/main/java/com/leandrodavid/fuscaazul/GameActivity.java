@@ -45,20 +45,6 @@ public class GameActivity extends ActionBarActivity {
 
     }
 
-    private void setOnCardDismissListener(final CardModel card){
-        card.setOnCardDismissedListener(new CardModel.OnCardDismissedListener() {
-            @Override
-            public void onLike() {
-                Toast.makeText(GameActivity.this,"I liked it " + card.getTitle(),Toast.LENGTH_SHORT).show();
-                Log.d("Swipeable Card", "I liked it");
-            }
-
-            @Override
-            public void onDislike() {
-                Toast.makeText(GameActivity.this,"I did not liked it"+ card.getTitle(),Toast.LENGTH_SHORT).show();
-            }
-        });
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
