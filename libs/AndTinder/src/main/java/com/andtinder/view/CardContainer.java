@@ -446,6 +446,7 @@ public class CardContainer extends AdapterView<ListAdapter> {
                 duration = Math.min(500, duration);
 
                 mTopCard = getChildAt(getChildCount() - 2);
+                int childCound = getChildCount();
                 CardModel cardModel = (CardModel)getAdapter().getItem(getChildCount() - 1);
 
                 if(mTopCard != null)
